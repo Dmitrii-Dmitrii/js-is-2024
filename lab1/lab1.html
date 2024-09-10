@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="портфолио, резюме, HTML, сайт">
+    <meta name="description" content="Резюме-портфолио разработчика.">
+    <title>Мое портфолио</title>
+</head>
+<body style="background-color: bisque;">
+<header>
+    <div>
+        <img src="photos/logo.JPG" alt="Логотип" width="180" height="250" style="float: left; margin-right: 10px;">
+        <h1>Резюме-портфолио разработчика</h1>
+    </div>
+
+    <nav>
+        <ul style="margin-left: 170px; font-size: 20px;">
+            <li><a href="#about">О себе</a></li>
+            <li><a href="#portfolio">Портфолио</a></li>
+            <li><a href="#contact">Контакты</a></li>
+            <li><a href="#quote">Цитата</a></li>
+            <li><a href="#successFormula">Формула успеха</a></li>
+            <li><a href="#codeSnippet">Пример кода</a></li>
+            <li><a href="#asciiArt">ASCII-графика</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="about" style="margin-top: 50px;">
+        <h2>О себе</h2>
+        <p>Меня зовут Дмитрий Оншин, я студент университета ИТМО, ФИТиП, Разработка ПО, 3 курс. Занимаюсь backend-разработкой приложений на C# и Java.</p>
+    </section>
+
+    <section id="portfolio">
+        <h2>Портфолио</h2>
+
+        <section>
+            <h3>Учебные проекты</h3>
+            <article>
+                <h4>C#</h4>
+                <p>5 лабораторных работ, нацеленных на изучение языка программирования C#.<br>
+                    <a href="https://ronimizy.notion.site/Labs-ebf31349fa0a4c0d9328b198cfebed4e" target="_blank">Условия</a>
+                </p>
+            </article>
+            <article>
+                <h4>Java</h4>
+                <p>5 лабораторных работ, нацеленных на изучение языка программирования и технологий в Java.<br>
+                    <a href="https://gist.github.com/DianaNeumann/8ef03e192895c857656371f0e6818e62" target="_blank">Условия</a>
+                </p>
+            </article>
+        </section>
+
+        <section>
+            <h3>Рабочие проекты</h3>
+            <article>
+                <h4>C#</h4>
+                <p>Тут я вам ничего не покажу, потому что NDA, хоть я его и не подписывал.</p>
+            </article>
+            <article>
+                <h4>Java</h4>
+                <p>А тут я тем более вам ничего не покажу, что подписал NDA.</p>
+            </article>
+        </section>
+
+    </section>
+
+    <section id="contact">
+        <h2>Контакты</h2>
+        <p>Электронная почта: dmitrii.onshin@mail.ru</p>
+        <p>Телефон: iPhone 12</p>
+    </section>
+
+    <section id="quote">
+        <h2>Цитата</h2>
+        <blockquote>
+            <p>«Шкаф не тумба, Тимон не Пумба.»</p>
+        </blockquote>
+    </section>
+
+    <section id="successFormula">
+        <h2>Формула успеха</h2>
+        <p>Успех = <strong>усердие</strong> + <em>талант</em> + <sub>опыт</sub> + <sup>неудачи</sup></p>
+    </section>
+
+    <section id="codeSnippet">
+        <h2>Пример кода</h2>
+        <aside>
+            <p>Ниже представлен пример функции на JavaScript:</p>
+        </aside>
+        <pre>
+<code>
+function greet(name) {
+    return `Hello, ${name}!`;
+}
+console.log(greet('World'));
+</code>
+        </pre>
+    </section>
+
+
+    <section>
+        <h2>ASCII-графика</h2>
+        <div class="ascii-art" id="asciiArt">
+            <pre id="asciiContent">
+                 /\_/\
+                ( o.o )
+                 > ^ <
+                 <| |>
+                  | |
+            </pre>
+        </div>
+
+        <script>
+            const asciiArt = document.getElementById('asciiContent');
+            const frames = [
+                `
+  /|_/|
+ ( o.o )
+  > ^ <
+  <| |>
+   | |
+            `,
+                `
+  /|_/|
+ ( ^.^ )
+  > ^ <
+  /|/|
+   | |
+            `
+            ];
+            let frameIndex = 0;
+
+            function animate() {
+                asciiArt.textContent = frames[frameIndex];
+                frameIndex = (frameIndex + 1) % frames.length;
+                setTimeout(animate, 300);
+            }
+
+            animate();
+        </script>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2024 Дмитрий Оншин. Все права не защищены.</p>
+</footer>
+</body>
+</html>
