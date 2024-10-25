@@ -74,7 +74,7 @@ blockquote {
     margin-left: 0;
 }
 
-.gallery {
+.cars {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
@@ -82,7 +82,7 @@ blockquote {
     margin-top: 20px;
 }
 
-.gallery img {
+.cars img {
     width: calc(33.333% - 10px);
     height: auto;
     border-radius: 8px;
@@ -149,7 +149,7 @@ blockquote {
 }
 
 @media screen and (min-width: 1920px) {
-    .gallery img {
+    .cars img {
         width: calc(50% - 10px);
     }
 }
@@ -159,11 +159,7 @@ blockquote {
         flex-direction: column;
     }
 
-    .gallery {
+    .cars {
         flex-direction: column;
-    }
-
-    #statistics {
-        display: none;
     }
 }
