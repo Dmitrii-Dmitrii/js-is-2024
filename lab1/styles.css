@@ -79,7 +79,7 @@ blockquote {
     gap: 10px;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 20px;
+    margin: auto;
 }
 
 .cars img {
