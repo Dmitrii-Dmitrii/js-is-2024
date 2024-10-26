@@ -7,15 +7,14 @@
     <title>Мое портфолио</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body style="background-color: bisque;">
+<body>
 <header>
     <div>
-        <img src="photos/logo.JPG" alt="Логотип" width="180" height="250" style="float: left; margin-right: 10px;">
         <h1>Резюме-портфолио разработчика</h1>
     </div>
 
     <nav>
-        <ul style="margin-left: 170px; font-size: 20px;">
+        <ul>
             <li><a href="#about">О себе</a></li>
             <li><a href="#portfolio">Портфолио</a></li>
             <li><a href="#contact">Контакты</a></li>
@@ -23,17 +22,18 @@
             <li><a href="#successFormula">Формула успеха</a></li>
             <li><a href="#codeSnippet">Пример кода</a></li>
             <li><a href="#asciiArt">ASCII-графика</a></li>
+            <li><a href="#cars">Любимые автомобили</a></li>
         </ul>
     </nav>
 </header>
 
 <main>
-    <section id="about" style="margin-top: 50px;">
+    <section id="about" class="blocks">
         <h2>О себе</h2>
         <p>Меня зовут Дмитрий Оншин, я студент университета ИТМО, ФИТиП, Разработка ПО, 3 курс. Занимаюсь backend-разработкой приложений на C# и Java.</p>
     </section>
 
-    <section id="portfolio">
+    <section id="portfolio" class="blocks">
         <h2>Портфолио</h2>
 
         <section>
@@ -43,12 +43,50 @@
                 <p>5 лабораторных работ, нацеленных на изучение языка программирования C#.<br>
                     <a href="https://ronimizy.notion.site/Labs-ebf31349fa0a4c0d9328b198cfebed4e" target="_blank">Условия</a>
                 </p>
+                <div class="c-study">
+                    <div>№ лабораторной</div>
+                    <div>Оценка</div>
+
+                    <div>1</div>
+                    <div>12/12</div>
+
+                    <div>2</div>
+                    <div>16/16</div>
+
+                    <div>3</div>
+                    <div>16/16</div>
+
+                    <div>4</div>
+                    <div>16/16</div>
+
+                    <div>5</div>
+                    <div>20/20</div>
+                </div>
             </article>
             <article>
                 <h4>Java</h4>
                 <p>5 лабораторных работ, нацеленных на изучение языка программирования и технологий в Java.<br>
                     <a href="https://gist.github.com/DianaNeumann/8ef03e192895c857656371f0e6818e62" target="_blank">Условия</a>
                 </p>
+                <div class="java-study">
+                    <div>№ лабораторной</div>
+                    <div>Оценка</div>
+
+                    <div>1</div>
+                    <div>16/16</div>
+
+                    <div>2</div>
+                    <div>16/16</div>
+
+                    <div>3</div>
+                    <div>16/16</div>
+
+                    <div>4</div>
+                    <div>16/16</div>
+
+                    <div>5</div>
+                    <div>14/16</div>
+                </div>
             </article>
         </section>
 
@@ -57,34 +95,52 @@
             <article>
                 <h4>C#</h4>
                 <p>Тут я вам ничего не покажу, потому что NDA, хоть я его и не подписывал.</p>
+                <div class="c-work">
+                    <div>Дата начала работ</div>
+                    <div>Дата окончания работ</div>
+                    <div>Есть ли текущая поддержка проекта</div>
+
+                    <div>23.03.24</div>
+                    <div>15.07.24</div>
+                    <div>Да</div>
+                </div>
             </article>
             <article>
                 <h4>Java</h4>
                 <p>А тут я тем более вам ничего не покажу, потому что подписал NDA.</p>
+                <div class="java-work">
+                    <div>Дата начала работ</div>
+                    <div>Дата окончания работ</div>
+                    <div>Есть ли текущая поддержка проекта</div>
+
+                    <div>01.07.24</div>
+                    <div>Не закончено</div>
+                    <div>Да</div>
+                </div>
             </article>
         </section>
 
     </section>
 
-    <section id="contact">
+    <section id="contact" class="blocks">
         <h2>Контакты</h2>
         <p>Электронная почта: dmitrii.onshin@mail.ru</p>
         <p>Телефон: iPhone 12</p>
     </section>
 
-    <section id="quote">
+    <section id="quote" class="blocks">
         <h2>Цитата</h2>
         <blockquote>
             <p>«Шкаф не тумба, Тимон не Пумба.»</p>
         </blockquote>
     </section>
 
-    <section id="successFormula">
+    <section id="successFormula" class="blocks">
         <h2>Формула успеха</h2>
         <p>Успех = <strong>усердие</strong> + <em>талант</em> + <sub>опыт</sub> + <sup>неудачи</sup></p>
     </section>
 
-    <section id="codeSnippet">
+    <section id="codeSnippet" class="blocks">
         <h2>Пример кода</h2>
         <aside>
             <p>Ниже представлен пример функции на JavaScript:</p>
@@ -100,7 +156,7 @@ console.log(greet('World'));
     </section>
 
 
-    <section>
+    <section class="blocks">
         <h2>ASCII-графика</h2>
         <div class="ascii-art" id="asciiArt">
             <pre id="asciiContent">
@@ -140,6 +196,15 @@ console.log(greet('World'));
 
             animate();
         </script>
+    </section>
+
+    <section id="cars" class="blocks">
+        <h2>Любимые автомобили</h2>
+        <div class="cars">
+            <img src="photos/porsche.jpg" alt="Проект 1">
+            <img src="photos/bmw.jpg" alt="Проект 2">
+            <img src="photos/mini.jpg" alt="Проект 3">
+        </div>
     </section>
 
 </main>
