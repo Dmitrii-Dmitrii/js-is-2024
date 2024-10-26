@@ -161,5 +161,6 @@ blockquote {
 
     .cars {
         flex-direction: column;
+        display: none;
     }
 }
