@@ -44,7 +44,7 @@ a {
 }
 
 a:hover {
-    color: #005f99;
+    color: #ff8600;
 }
 
 .blocks {
@@ -241,7 +241,8 @@ blockquote {
     }
 }
 
-.active {
+nav ul li a.active {
     font-weight: bold;
-    border-bottom: 2px solid #432b1d;
+    color: #432b1d;
+    text-decoration: underline;
 }

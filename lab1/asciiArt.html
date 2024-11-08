@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="ASCII-графика">
+  <meta name="description" content="ASCII-графика.">
+  <script src="scripts/main.js" defer></script>
+  <title>Портфолио</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <div>
+    <h1>Резюме-портфолио разработчика</h1>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="about.html">О себе</a></li>
+      <li><a href="portfolio.html">Портфолио</a></li>
+      <li><a href="contacts.html">Контакты</a></li>
+      <li><a href="quote.html">Цитата</a></li>
+      <li><a href="successFormula.html">Формула успеха</a></li>
+      <li><a href="codeSnippet.html">Пример кода</a></li>
+      <li><a href="asciiArt.html">ASCII-графика</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="blocks">
+    <h2>ASCII-графика</h2>
+    <div class="ascii-art" id="asciiArt">
+            <pre id="asciiContent">
+                 /\_/\
+                ( o.o )
+                 > ^ <
+                 <| |>
+                  | |
+            </pre>
+    </div>
+
+    <script>
+      const asciiArt = document.getElementById('asciiContent');
+      const frames = [
+        `
+  /|_/|
+ ( o.o )
+  > ^ <
+  <| |>
+   | |
+            `,
+        `
+  /|_/|
+ ( ^.^ )
+  > ^ <
+  /|/|
+   | |
+            `
+      ];
+      let frameIndex = 0;
+
+      function animate() {
+        asciiArt.textContent = frames[frameIndex];
+        frameIndex = (frameIndex + 1) % frames.length;
+        setTimeout(animate, 300);
+      }
+
+      animate();
+    </script>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2024 Дмитрий Оншин. Все права не защищены.</p>
+</footer>
+</body>
+</html>
