@@ -1,5 +1,5 @@
 (function() {
-    window.addEventListener('load', () => {
+    window.addEventListener('load', function() {
         const loadTime = performance.now();
         const footer = document.querySelector('footer');
         const loadInfo = document.createElement('p');
