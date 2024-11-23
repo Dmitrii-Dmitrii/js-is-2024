@@ -75,3 +75,10 @@ window.addEventListener('load', function() {
         document.getElementById('table-form').dispatchEvent(new Event('submit'));
     }
 });
+
+document.getElementById('remove-table').addEventListener('click', function()  {
+    const tableContainer = document.getElementById('table-container');
+    while (tableContainer.firstChild) {
+        tableContainer.removeChild(tableContainer.firstChild);
+    }
+});
