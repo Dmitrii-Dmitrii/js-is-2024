@@ -272,3 +272,8 @@ nav ul li a.active {
     background-color: #f9f9f9;
 }
 
+.form-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
