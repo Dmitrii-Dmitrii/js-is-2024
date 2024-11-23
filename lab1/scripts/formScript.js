@@ -27,9 +27,7 @@ document.getElementById('table-form').addEventListener('submit', function(event)
     };
 
     const tableContainer = document.getElementById('table-container');
-    while (tableContainer.firstChild) {
-        tableContainer.removeChild(tableContainer.firstChild);
-    }
+    clearTable(tableContainer);
 
     const table = document.createElement('table');
     table.classList.add('schedule-table');
@@ -78,7 +76,11 @@ window.addEventListener('load', function() {
 
 document.getElementById('remove-table').addEventListener('click', function()  {
     const tableContainer = document.getElementById('table-container');
+    clearTable(tableContainer);
+});
+
+function clearTable(tableContainer) {
     while (tableContainer.firstChild) {
         tableContainer.removeChild(tableContainer.firstChild);
     }
-});
+}
