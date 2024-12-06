@@ -246,3 +246,34 @@ nav ul li a.active {
     color: #432b1d;
     text-decoration: underline;
 }
+
+.generated-table {
+    margin-top: 20px;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.schedule-table th,
+.schedule-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+.schedule-table th {
+    background-color: #e3ad76;
+    color: white;
+}
+
+.schedule-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.form-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
