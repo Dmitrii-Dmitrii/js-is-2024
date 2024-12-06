@@ -2,10 +2,11 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="keywords" content="цитата">
-  <meta name="description" content="Цитата.">
+  <meta name="keywords" content="Комментарии">
+  <meta name="description" content="Комментарии.">
   <script src="scripts/main.js" defer></script>
-  <title>Портфолио</title>
+  <script src="scripts/comments.js" defer></script>
+  <title>О себе</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -30,11 +31,10 @@
 </header>
 
 <main>
-  <section id="quote" class="blocks">
-    <h2>Цитата</h2>
-    <blockquote>
-      <p>«Шкаф не тумба, Тимон не Пумба.»</p>
-    </blockquote>
+  <section id="comments" class="blocks">
+    <h2>Комментарии</h2>
+    <div id="preloader">Загрузка...</div>
+    <div id="comments-container"></div>
   </section>
 </main>
 
