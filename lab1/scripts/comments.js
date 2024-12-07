@@ -40,7 +40,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 commentElement.appendChild(commentTitle);
 
                 const commentEmail = document.createElement("p");
-                commentEmail.innerHTML = `<strong>Email:</strong> ${comment.email}`;
+                const emailStrong = document.createElement("strong");
+                emailStrong.textContent = "Email:";
+                commentEmail.appendChild(emailStrong);
+                commentEmail.appendChild(document.createTextNode(` ${comment.email}`));
                 commentElement.appendChild(commentEmail);
 
                 const commentBody = document.createElement("p");
