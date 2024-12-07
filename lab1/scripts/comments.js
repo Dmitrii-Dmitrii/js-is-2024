@@ -2,14 +2,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const preloader = document.getElementById("preloader");
     const commentsContainer = document.getElementById("comments-container");
 
+    let isFirstFetch = true;
+
     async function fetchComments() {
         try {
-            preloader.style.display = "block"; // Показываем preloader
-            commentsContainer.innerHTML = ""; // Очищаем контейнер
+            preloader.style.display = "block";
+            commentsContainer.replaceChildren();
 
             // Псевдослучайная фильтрация
-            const randomId = Math.random() > 0.5 ? 100 : 200;
-            const url = `https://jsonplaceholder.typicode.com/comments?id=${randomId}`;
+            const url = isFirstFetch
+                ? "https://jsonplaceholder.typicode.com/comments?id_gte=100&_limit=5"
+                : "https://jsonplaceholder.typicode.com/comments?id_lte=200&_limit=5";
+            isFirstFetch = !isFirstFetch;
+
             const response = await fetch(url);
 
             if (!response.ok) {
@@ -17,26 +22,39 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             const comments = await response.json();
-            preloader.style.display = "none"; // Скрываем preloader
+            preloader.style.display = "none";
 
             if (comments.length === 0) {
-                commentsContainer.innerHTML = "<p>Нет комментариев для отображения.</p>";
+                const noCommentsMessage = document.createElement("p");
+                noCommentsMessage.textContent = "Нет комментариев для отображения.";
+                commentsContainer.appendChild(noCommentsMessage);
                 return;
             }
 
             comments.forEach((comment) => {
                 const commentElement = document.createElement("div");
                 commentElement.classList.add("comment");
-                commentElement.innerHTML = `
-                    <h3>${comment.name}</h3>
-                    <p><strong>Email:</strong> ${comment.email}</p>
-                    <p>${comment.body}</p>
-                `;
+
+                const commentTitle = document.createElement("h3");
+                commentTitle.textContent = comment.name;
+                commentElement.appendChild(commentTitle);
+
+                const commentEmail = document.createElement("p");
+                commentEmail.innerHTML = `<strong>Email:</strong> ${comment.email}`;
+                commentElement.appendChild(commentEmail);
+
+                const commentBody = document.createElement("p");
+                commentBody.textContent = comment.body;
+                commentElement.appendChild(commentBody);
+
                 commentsContainer.appendChild(commentElement);
             });
         } catch (error) {
-            preloader.style.display = "none"; // Скрываем preloader
-            commentsContainer.innerHTML = `<p class="error-message">⚠ Что-то пошло не так: ${error.message}</p>`;
+            preloader.style.display = "none";
+            const errorMessage = document.createElement("p");
+            errorMessage.classList.add("error-message");
+            errorMessage.textContent = `⚠ Что-то пошло не так: ${error.message}`;
+            commentsContainer.appendChild(errorMessage);
         }
     }
 
