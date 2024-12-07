@@ -277,3 +277,55 @@ nav ul li a.active {
     align-items: center;
     gap: 5px;
 }
+
+#preloader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    color: #555;
+}
+
+#preloader::after {
+    content: " ";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    border: 2px solid #555;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#comments-container {
+    margin-top: 10px;
+}
+
+.comment {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.comment h3 {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+.comment p {
+    margin: 5px 0;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+}
