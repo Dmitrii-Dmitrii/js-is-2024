@@ -5,8 +5,13 @@
     <meta name="keywords" content="портфолио, резюме, HTML, сайт">
     <meta name="description" content="Резюме-портфолио разработчика.">
     <script src="scripts/main.js" defer></script>
+    <script src="scripts/slider.js" defer></script>
     <title>О себе</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
 </head>
 <body>
 <header>
@@ -35,15 +40,24 @@
         <p>Меня зовут Дмитрий Оншин, я студент университета ИТМО, ФИТиП, Разработка ПО, 3 курс. Занимаюсь backend-разработкой приложений на C# и Java.</p>
     </section>
 
-    <section id="cars" class="blocks">
+    <section id="gallery" class="blocks">
         <h2>Любимые автомобили</h2>
-        <div class="cars">
-            <img src="photos/porsche.jpg" alt="Проект 1">
-            <img src="photos/bmw.jpg" alt="Проект 2">
-            <img src="photos/mini.jpg" alt="Проект 3">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="photos/porsche.jpg" alt="Porsche" onclick="showModal('photos/porsche.jpg')">
+                </div>
+                <div class="swiper-slide">
+                    <img src="photos/bmw.jpg" alt="BMW" onclick="showModal('photos/bmw.jpg')">
+                </div>
+                <div class="swiper-slide">
+                    <img src="photos/mini.jpg" alt="Mini" onclick="showModal('photos/mini.jpg')">
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
     </section>
-
 </main>
 
 <footer>

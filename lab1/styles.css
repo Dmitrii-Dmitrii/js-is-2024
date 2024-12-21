@@ -329,3 +329,43 @@ nav ul li a.active {
     color: red;
     font-weight: bold;
 }
+
+.swiper-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.swiper-slide img {
+    width: auto;
+    height: auto;
+    max-width: 30%;
+    max-height: 30%;
+    margin: 0 auto;
+    display: block;
+    object-fit: cover;
+}
+
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #432b1d;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.swal2-popup {
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
